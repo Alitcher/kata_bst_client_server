@@ -30,6 +30,7 @@ A high-level explanation of how it can be implemented:
 - Server: The server can be modified to use a multi-threaded approach. After accepting a new client connection, a new thread can be instantiated to handle the communication with that client. This allows the server to handle multiple client connections simultaneously.
 - Client: The client can keep being single-threaded as it initiates the connection with the server and sends commands sequentially.
 
+- We can use pthread to implement multithreading. In an advanced level, if BST is big and skewed, we can use OpenMP or OpenCL to do operations such as convert to AVL tree concurrently.
 The project, however, does not have multithreading implemented. This explanation gives you an idea of how it could be done.
 
 Enjoy!
