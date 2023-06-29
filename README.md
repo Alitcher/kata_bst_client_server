@@ -6,12 +6,13 @@
 
 To run the program, follow these steps:
 
-1. Clone the repository to your local machine.
+1. Clone the repository to your local Linux machine.
 2. Navigate to the project directory.
 3. Build the project using the provided Makefile by running the command `make all`.
-4. Start the server by running the command `./server`.
-5. Open another terminal window and start the client by running the command `./client`.
-6. You can now enter commands in the client terminal and see the responses from the server.
+4. You'll find the compiled executables in the bin directory. So navigate to it using `cd bin`.
+5. Start the server by running the command `./server`.
+6. Open another terminal window and start the client by running the command `./client`.
+7. You can now enter commands in the client terminal and see the responses from the server.
 
 ## Project Architecture
 
