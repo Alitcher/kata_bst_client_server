@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/BSTTest.dir/BSTTest.cpp.o CMakeFiles/BSTTest.dir/home/alicia/Documents/Leil/assignment/src/BST.cpp.o CMakeFiles/BSTTest.dir/home/alicia/Documents/Leil/assignment/src/ServerModel.cpp.o CMakeFiles/BSTTest.dir/home/alicia/Documents/Leil/assignment/src/Node.cpp.o -o BSTTest  /usr/lib/x86_64-linux-gnu/libgtest_main.a /usr/lib/x86_64-linux-gnu/libgtest.a 
