@@ -6,8 +6,8 @@
 
 To run the program, follow these steps:
 
-1. Clone the repository to your local Linux machine.
-2. Navigate to the project directory.
+1. Clone the repository to your local Linux machine. `git clone https://github.com/Alitcher/kata_bst_client_server.git`
+2. Navigate to the project directory. `cd kata_bst_client_server` 
 3. Build the project using the provided Makefile by running the command `make all`.
 4. You'll find the compiled executables in the bin directory. So navigate to it using `cd bin`.
 5. Start the server by running the command `./server`.

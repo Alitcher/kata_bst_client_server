@@ -4,6 +4,7 @@ OBJDIR = obj
 BINDIR = bin
 SRCDIR = src
 INCLUDE_DIR = include
+TESTDIR = tests
 _INCL = BST.h Node.h ServerModel.h
 INCL = $(patsubst %,$(INCLUDE_DIR)/%,$(_INCL))
 _OBJ = Node.o BST.o ServerModel.o client.o server.o 
@@ -43,3 +44,7 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(INCL)
 
 clean:
 	$(RM) $(OBJDIR) $(BINDIR)
+
+test: directories $(OBJDIR)/test.o $(OBJ)
+	$(CXX) -o $(BINDIR)/test $^ -lgtest -lgtest_main
+	$(BINDIR)/test
