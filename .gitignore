@@ -1,0 +1,43 @@
+# Operating System files
+*~
+.DS_Store
+
+# Compiled object files
+*.o
+
+# Vim files #
+#############
+.clang_complete
+tags
+*.taghl
+compile_commands.json
+.ycm_extra_conf.py
+
+# Commonly used build directory #
+#################################
+/build*
+/cmake-build-*
+/install/
+/test_output/
+
+# Executables Linux
+client
+server
+# Executables Window
+client.exe
+server.exe
+
+# Dependency directories
+deps/
+vendor/
+
+# IDE-specific files
+.vscode/
+.vs/
+.idea/
+
+# Logs
+*.log
+
+#m My personal memo and playground
+memo.txt
