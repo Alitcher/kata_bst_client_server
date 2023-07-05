@@ -2,6 +2,10 @@
 
 This is "tests" folder that contains the necessary files to build and test the code.
 
+## Test Goals 🎯
+
+The tests in this folder aim to verify the correctness and functionality of the code components, including the Binary Search Tree (BST) and the Client/ServerModel.
+
 ## Prerequisites ⚙️
 
 Before proceeding, please make sure that you meet the following requirements:
