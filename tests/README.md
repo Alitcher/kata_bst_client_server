@@ -19,7 +19,7 @@ Before proceeding, please make sure that you meet the following requirements:
 1. Open a terminal and navigate to the "tests" directory.
 2. Run the following command to configure the build:
   - `cmake .`
-  - `cmake --build` to build the executable test file.
+  - `make` to build the executable test file.
   - `./BSTTest` to run the test. This will execute the test suite and display the results. 🎉
 
 ## Troubleshooting 🛠️
