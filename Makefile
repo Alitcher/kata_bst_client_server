@@ -15,7 +15,7 @@ ifdef OS
     EXE_EXT = .exe
     LIBS = -lws2_32
 else
-    RM = rm -rf
+    RM = rm -r
     MKDIR = mkdir -p
     EXE_EXT =
     LIBS =
