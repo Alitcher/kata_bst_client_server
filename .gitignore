@@ -23,6 +23,8 @@ compile_commands.json
 # Executables Linux
 client
 server
+/tests/BSTTest
+
 # Executables Window
 client.exe
 server.exe

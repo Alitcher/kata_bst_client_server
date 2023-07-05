@@ -1,0 +1,3 @@
+/home/alicia/Documents/Leil/assignment/tests/CMakeFiles/BSTTest.dir
+/home/alicia/Documents/Leil/assignment/tests/CMakeFiles/edit_cache.dir
+/home/alicia/Documents/Leil/assignment/tests/CMakeFiles/rebuild_cache.dir
