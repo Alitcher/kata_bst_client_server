@@ -5,6 +5,12 @@
 # Compiled object files
 *.o
 
+#TDD files
+/tests/CMakeCache.txt
+/tests/CMakeFiles/
+/tests/cmake_install.cmake
+/tests/Makefile
+
 # Vim files #
 #############
 .clang_complete
