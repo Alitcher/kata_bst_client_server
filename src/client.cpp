@@ -10,8 +10,11 @@
 #include <unistd.h>
 #endif
 
+const std::string serverAddress = "127.0.0.1";
+const int defaultPort = 8888;
+
 // Function to establish the connection with the server
-int connectToServer(const std::string& serverAddress, int port)
+int connectToServer(const std::string &serverAddress, int port)
 {
     int clientSocket = socket(AF_INET, SOCK_STREAM, 0);
     if (clientSocket == -1)
@@ -20,7 +23,9 @@ int connectToServer(const std::string& serverAddress, int port)
         return -1;
     }
 
-    struct sockaddr_in serverAddr{};
+    struct sockaddr_in serverAddr
+    {
+    };
     serverAddr.sin_family = AF_INET;
 #ifdef _WIN32
     serverAddr.sin_addr.s_addr = inet_addr(serverAddress.c_str());
@@ -29,7 +34,7 @@ int connectToServer(const std::string& serverAddress, int port)
 #endif
     serverAddr.sin_port = htons(port);
 
-    if (connect(clientSocket, (struct sockaddr*)&serverAddr, sizeof(serverAddr)) == -1)
+    if (connect(clientSocket, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) == -1)
     {
         std::cerr << "Failed to connect to server" << std::endl;
         close(clientSocket);
@@ -40,7 +45,7 @@ int connectToServer(const std::string& serverAddress, int port)
 }
 
 // Function to send a command to the server and receive the response
-std::string sendCommand(int clientSocket, const std::string& command)
+std::string sendCommand(int &clientSocket, const std::string &command)
 {
     if (send(clientSocket, command.c_str(), command.length(), 0) == -1)
     {
@@ -67,7 +72,7 @@ std::string sendCommand(int clientSocket, const std::string& command)
 }
 
 // Function to handle user input and interaction
-void handleUserInput(int clientSocket)
+void handleUserInput(int &clientSocket)
 {
     std::cout << "Connected to server. You can start entering commands..." << std::endl;
 
@@ -89,9 +94,6 @@ void handleUserInput(int clientSocket)
 
 int main()
 {
-    std::string serverAddress = "127.0.0.1";
-    int port = 8888;
-
 #ifdef _WIN32
     WSADATA wsaData;
     if (WSAStartup(MAKEWORD(2, 2), &wsaData) != 0)
@@ -101,7 +103,7 @@ int main()
     }
 #endif
 
-    int clientSocket = connectToServer(serverAddress, port);
+    int clientSocket = connectToServer(serverAddress, defaultPort);
     if (clientSocket == -1)
     {
 #ifdef _WIN32
