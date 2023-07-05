@@ -21,7 +21,16 @@ The project is organized into several components:
 - `BST`: Represents the Binary Search Tree data structure, which is responsible for storing and managing integers.
 - `Node`: Represents a node in the Binary Search Tree.
 - `ServerModel`: Implements the server-side functionality, including socket creation, command processing, and communication with the client.
-- `Client`: Implements the client-side functionality, including command input, sending commands to the server, and displaying server responses.
+- `ClientModel`: Implements the client-side functionality, including command input, sending commands to the server, and displaying server responses.
+
+## Unit Testing
+
+The project includes a `tests` folder that contains unit tests implemented using the Google Test framework. These tests ensure the correctness of the BST and server functionalities. To run the tests, follow these steps:
+
+1. Navigate to the `tests` directory: `cd tests`
+2. Build the tests using CMake: `cmake .`
+3. Compile the tests: `make`
+4. Run the tests: `./BSTTest`
 
 ## Multithreaded Version
 
