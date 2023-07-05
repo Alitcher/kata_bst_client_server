@@ -4,10 +4,9 @@ OBJDIR = obj
 BINDIR = bin
 SRCDIR = src
 INCLUDE_DIR = include
-TESTDIR = tests
-_INCL = BST.h Node.h ServerModel.h
+_INCL = BST.h Node.h ServerModel.h ClientModel.h
 INCL = $(patsubst %,$(INCLUDE_DIR)/%,$(_INCL))
-_OBJ = Node.o BST.o ServerModel.o client.o server.o 
+_OBJ = Node.o BST.o ServerModel.o client.o server.o ClientModel.o
 OBJ = $(patsubst %,$(OBJDIR)/%,$(_OBJ))
 
 ifdef OS
@@ -32,7 +31,7 @@ $(OBJDIR):
 $(BINDIR):
 	mkdir -p $(BINDIR)
 
-client_bin: $(OBJDIR)/client.o $(OBJDIR)/Node.o $(OBJDIR)/BST.o $(OBJDIR)/ServerModel.o 
+client_bin: $(OBJDIR)/client.o $(OBJDIR)/Node.o $(OBJDIR)/BST.o $(OBJDIR)/ServerModel.o $(OBJDIR)/ClientModel.o
 	$(CXX) -o $(BINDIR)/client$(EXE_EXT) $^ $(LIBS)
 
 server_bin: $(OBJDIR)/server.o $(OBJDIR)/Node.o $(OBJDIR)/BST.o $(OBJDIR)/ServerModel.o 
@@ -44,7 +43,3 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.cpp $(INCL)
 
 clean:
 	$(RM) $(OBJDIR) $(BINDIR)
-
-test: directories $(OBJDIR)/test.o $(OBJ)
-	$(CXX) -o $(BINDIR)/test $^ -lgtest -lgtest_main
-	$(BINDIR)/test
