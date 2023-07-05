@@ -6,7 +6,7 @@ SRCDIR = src
 INCLUDE_DIR = include
 _INCL = BST.h Node.h ServerModel.h
 INCL = $(patsubst %,$(INCLUDE_DIR)/%,$(_INCL))
-_OBJ = Node.o BST.o ServerModel.o client.o server.o
+_OBJ = Node.o BST.o ServerModel.o client.o server.o 
 OBJ = $(patsubst %,$(OBJDIR)/%,$(_OBJ))
 
 ifdef OS
@@ -31,10 +31,10 @@ $(OBJDIR):
 $(BINDIR):
 	mkdir -p $(BINDIR)
 
-client_bin: $(OBJDIR)/client.o $(OBJDIR)/Node.o $(OBJDIR)/BST.o $(OBJDIR)/ServerModel.o
+client_bin: $(OBJDIR)/client.o $(OBJDIR)/Node.o $(OBJDIR)/BST.o $(OBJDIR)/ServerModel.o 
 	$(CXX) -o $(BINDIR)/client$(EXE_EXT) $^ $(LIBS)
 
-server_bin: $(OBJDIR)/server.o $(OBJDIR)/Node.o $(OBJDIR)/BST.o $(OBJDIR)/ServerModel.o
+server_bin: $(OBJDIR)/server.o $(OBJDIR)/Node.o $(OBJDIR)/BST.o $(OBJDIR)/ServerModel.o 
 	$(CXX) -o $(BINDIR)/server$(EXE_EXT) $^ $(LIBS)
 
 
