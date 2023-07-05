@@ -1,9 +1,5 @@
 cmake_minimum_required(VERSION 3.12)
-
-# Set the project name and version
 project(BSTTest)
-
-# Find the GTest package
 find_package(GTest REQUIRED)
 
 # Add the executable for the tests
@@ -17,3 +13,16 @@ target_link_libraries(BSTTest GTest::GTest GTest::Main)
 
 # Set the C++ standard to C++11
 set_property(TARGET BSTTest PROPERTY CXX_STANDARD 11)
+
+# Define a custom target for cleaning
+add_custom_target(clean-all
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_BINARY_DIR}/CMakeCache.txt
+    COMMAND ${CMAKE_COMMAND} -E remove_directory ${CMAKE_BINARY_DIR}/CMakeFiles/
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_BINARY_DIR}/cmake_install.cmake
+    COMMAND ${CMAKE_COMMAND} -E remove ${CMAKE_BINARY_DIR}/Makefile
+    # Add more commands to remove additional files/directories as needed
+    WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+)
+
+# Make the clean-all target depend on the all target
+add_dependencies(clean-all BSTTest)
