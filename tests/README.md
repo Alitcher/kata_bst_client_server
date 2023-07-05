@@ -4,17 +4,19 @@ This is "tests" folder that contains the necessary files to build and test the c
 
 ## Prerequisites ⚙️
 
-To build the code and generate the executable, follow these steps:
+Before proceeding, please make sure that you meet the following requirements:
 
 1. You are running on a Linux machine.
-2. Make sure you have all the dependencies installed. `cmake` `gtest`
-3. Navigate to the `tests` directory which is where we are now.
-4. Open a terminal and execute the following commands:
+2. You have installed the required dependencies:
+   - `cmake`: The build system used for compiling the code.
+   - `gtest`: The Google Test framework for running the tests.
 
 ## Build ⚙️
-1. `cmake .`
-2. `cmake --build` to build the executable test file.
-3. `./BSTTest` to run the test. This will execute the test suite and display the results. 🎉
+1. Open a terminal and navigate to the "tests" directory.
+2. Run the following command to configure the build:
+  - `cmake .`
+  - `cmake --build` to build the executable test file.
+  - `./BSTTest` to run the test. This will execute the test suite and display the results. 🎉
 
 ## Troubleshooting 🛠️
 
