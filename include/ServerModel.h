@@ -5,10 +5,17 @@
 #include <string>
 #include <sstream>
 #include <iostream>
-#include <sys/socket.h>
-#include <arpa/inet.h>
-#include <netinet/in.h>
-#include <unistd.h>
+
+#ifdef _WIN32
+    #include <winsock2.h>
+    #pragma comment(lib, "ws2_32.lib")
+    typedef int socklen_t;
+#else
+    #include <sys/socket.h>
+    #include <arpa/inet.h>
+    #include <unistd.h>
+    #include <netinet/in.h>
+#endif
 
 class ServerModel {
     BST bst;
