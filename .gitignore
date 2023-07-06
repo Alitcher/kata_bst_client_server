@@ -4,12 +4,23 @@
 
 # Compiled object files
 *.o
+*.tlog
 
 #TDD files
 /tests/CMakeCache.txt
 /tests/CMakeFiles/
 /tests/cmake_install.cmake
 /tests/Makefile
+
+# Ignore CMake build files
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/Makefile
+
+# Ignore Visual Studio build files
+/Debug/
+/x64/
 
 # Vim files #
 #############
@@ -21,8 +32,8 @@ compile_commands.json
 
 # Commonly used build directory #
 #################################
-/build*
-/cmake-build-*
+/build*/
+/cmake-build-*/
 /install/
 /test_output/
 
@@ -34,6 +45,7 @@ server
 # Executables Window
 client.exe
 server.exe
+BSTTest.exe
 
 # Dependency directories
 deps/
